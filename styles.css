@@ -1,227 +1,339 @@
-.noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
-  }
-
-
-a.nav {
-    display: block;
-    font-size: large;
-    margin-bottom: 5%;
-    text-transform: uppercase;
-    font-weight: 400;
-
+.container {
+    width: 100%;
+    max-width: 1200px; /* maximum width for large screens */
+    margin: 0 auto;    /* center horizontally */
+    padding: 0 1rem;  /* small horizontal padding for small screens */
 }
 
-a:hover {
-    text-decoration: underline;
-    text-underline-position: under;
-    color: black;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
-.tab-pane {
-    border-width: 1px;
-    padding: 0;
-}
-
-.tab-content {
-    padding: 5%;
-    border: 1px solid darkgray;
-    border-radius: 0.5rem;
-    background: white;
-    max-height: 45rem;
-    overflow: auto;
-}
-
-.main-page {
-    border-top: 0cm;
-    margin-top: 5%;
-}
-
-.profile {
-    max-width: 15em;
-    border: 3px solid darkgray;
-}
-
-.tab-content {
-    padding: 5%;
-    border: 1px solid darkgray;
-    border-radius: 0.50rem;
-}
-
-.tabs-link {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.nav-pills .nav-link.active {
-    color:black;
-    border: 1px solid darkgray;
-    background-color: transparent;
-    margin-left: 1px;
-    margin-right: 1px;
-}
-
-.block-content {
-    margin-bottom: 2em;
-}
-
-.card-items {
-    padding: 1rem;
-}
-
-.card-text-projects {
-    min-height: 10rem;
-    padding-top: 1rem;
-}
-
-.card {
-    border: 1px solid darkgray;
-    max-width: 19rem;
-}
-
-.card-body {
-    min-height: 10rem;
-}
-
-.card-skills {
-    margin: 1rem;
-    width: 18rem;
-    min-height: 10rem;
-}
-
-.project-card {
-    width: 22rem; 
-    margin: 1rem;
-}
-
-.project-img {
-    height: 10rem;
-}
-
-li.nav-item.tabs-link li.nav-item.tabs-link:active {
-    text-decoration: none;
-    margin-right: 1px;
-    font-size: large;
-    font-weight: 400;
-}
-
-.btn-outline-dark:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show>.btn-outline-dark.dropdown-toggle{
-    color: black;
-    background-color: transparent;
-    border-color: darkgray;
-}
-
-.btn-outline-dark {
-    color: black;
-    background-color: transparent;
-    background-image: none;
-    border-color: transparent;
-}
-
-.btn-outline-dark:hover {
-    color: black;
-    background-color: transparent;
-    border-color: darkgray;
-}
-
-.btn-outline-dark.focus, .btn-outline-dark:focus {
-    box-shadow: 0 0 0 0 transparent;
-    border-color: darkgray;
-}
-
-li.nav-item.tabs-link:hover {
-    text-decoration: underline;
-    text-underline-position: under;
-}
-
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    background-color: whitesmoke;
-    
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #111;
+  transition: background 0.3s, color 0.3s;
 }
 
-
-
-a {
-    color: inherit;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-hr {
-    border-style: inset;
+body.dark {
+  background: #111;
+  color: #eee;
 }
 
 h2 {
-    font-size:x-large;
-    margin-block-start: 0;
-    margin-block-end: 1rem;
     margin-bottom: 1rem;
-    font-weight: 400;
 }
 
-h3 {
-    margin-block-end: 2%;
-    margin-block-start: 0;
+.project-img {
+    width:20rem;
+    height: 12rem;
+    border: gray;
+    border-radius: 5%;
 }
 
-h4 {
-    font-weight: 400;
-    font-size: large;
-    margin-block-start: 0;
-    margin-block-end: 1rem;
-    line-height: 2;
+/* Navbar */
+/* Navbar layout */
 
+/* Default navbar style */
+#navbar {
+  background-color: #ffffff; /* light mode background */
+  color: #000000; /* light mode text */
+  transition: background-color 0.3s, color 0.3s;
+  padding: 1rem;
 }
 
-h5 {
-    font-size: small;
-    text-transform: uppercase;
-    padding: 0;
-    margin-block-start: 0em;
-    text-decoration: none;
-    font-weight: 400;
-    margin-block-end: 0em;
-    line-height: 1.5;
+/* Dark mode navbar style */
+body.dark #navbar {
+  background-color: #1a1a1a; /* dark mode background */
+  color: #f0f0f0; /* dark mode text */
 }
 
-h6 {
-    margin-block-end: 0;
-    font-weight: 600;
-    font-size: large;
+/* Nav links dark mode */
+body.dark .nav-links a {
+  color: #f0f0f0;
+}
+
+/* Nav links hover effect in dark mode */
+body.dark .nav-links a:hover {
+  color: #ffd700;
+}
+
+/* Logo color in dark mode */
+body.dark .logo {
+  color: #f0f0f0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left side */
+.nav-left .logo {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+/* Right side (everything inline) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Links inline */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+/* Remove default list spacing */
+.nav-links li {
+  display: inline;
+}
+
+/* Links style */
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* Theme button */
+#themeToggle {
+  cursor: pointer;
+  font-size: 1rem;
+  background: none;
+  border: none;
+}
+
+
+/* Mobile toggle hidden on desktop */
+.nav-toggle {
+  display: none;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dark mode hamburger */
+body.dark .nav-toggle {
+  background-color: inherit; /* dark mode background */
+  color: #fff; /* icon color in dark mode */
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+}
+
+.bg-light {
+  background: #f7f7f7;
+}
+
+body.dark .bg-light {
+  background: #1c1c1c;
+}
+
+/* Contact */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h2 a {
+  color: black;           /* Default link color */
+  text-decoration: none;  /* Remove underline */
+  margin: 0 8px;          /* Space between icons */
+  transition: color 0.3s; /* Smooth color change */
+}
+
+/* Optional: hover effect */
+h2 a:hover {
+  color: gray;
+}
+
+
+/* Dark mode support */
+
+body.dark h2 a {
+    color: white;
+  }
+
+
+
+/* Hero */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.project-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  max-width: 23rem;
+  margin-bottom: 2rem;
+}
+
+body.dark .project-card {
+  background: #222;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: lightslategray;
+}
+
+/* Footer */
+footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+body.dark footer {
+  border-top-color: #444;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background: #ffffff; /* light mode background */;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  body.dark .nav-links {
+    background: #1a1a1a; /* light mode background */;
+    border-color: #444;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-toggle {
     display: block;
-    margin-block-start: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  }
 }
 
-p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    font-size:medium;
-    text-decoration: none;
-    font-weight: 600;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    display: block;
-    font-weight:400;
+/* Dark mode support */
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10%;
+  transition: background 0.3s, transform 0.3s;
 }
 
+#scrollTopBtn:hover {
+  background-color: slategray;
 
-ul {
-    margin-block-start: 0;
-    list-style-type: circle;
+  transform: scale(1.1);
 }
 
+body.dark #scrollTopBtn {
+  background-color: #555;
+  color: #eee;
+}
+
+body.dark #scrollTopBtn:hover {
+  background-color: #888;
+}
+
+/* Sticky Header Logic */
+#navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white; /* Match your site's background */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Offset for Smooth Scroll (Adjust 70px to your navbar's height) */
+section {
+  scroll-margin-top: 70px;
+}
+
+/* Ensure the nav-indicator is positioned relative to the nav container */
+.nav-right {
+  position: relative;
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: -5px;
+  height: 3px;
+  background-color: #007bff; /* Change to your brand color */
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a.active {
+  color: #007bff;
+}

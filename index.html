@@ -1,239 +1,160 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Benayu H. Priyanto</title>
-  </head>
-  <body class="noselect">
+  
+<title>Benayu H. Priyanto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+  <!-- Navbar -->
+  <nav id="navbar">
+  <div class="container nav-container">
+    
+    <div class="nav-left">
+      <a href="#home" class="logo">Benayu H. Priyanto</a>
+    </div>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#awards">Awards</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle">🌙</button>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
+      <span class="nav-indicator"></span>
+    </div>
+
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="section hero">
     <div class="container">
-      <div class="main-page">
-        <ul class="nav nav-pills justify-content-around" id="pills-tab" role="tablist">
-          <li class="nav-item">
-            <a class="navbar-brand"><h1>Benayu H. Priyanto</h1></a>
-          </li>
-          
-          <li class="nav-item tabs-link">
-            <a class="btn btn-outline-dark active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><i class="bi bi-person"></i> PROFILE</a>
-          </li>
-          <li class="nav-item tabs-link">
-            <a class="btn btn-outline-dark" id="pills-projects-tab" data-toggle="pill" href="#pills-projects" role="tab" aria-controls="pills-projects" aria-selected="false"><i class="bi bi-bar-chart"></i> PROJECTS</a>
-          </li>
-          <li class="nav-item tabs-link">
-            <a class="btn btn-outline-dark" id="pills-experience-tab" data-toggle="pill" href="#pills-experience" role="tab" aria-controls="pills-experience" aria-selected="false"><i class="bi bi-briefcase"> </i>EXPERIENCE</a>
-          </li>
-          <li class="nav-item tabs-link">
-            <a class="btn btn-outline-dark" id="pills-skills-tab" data-toggle="pill" href="#pills-skills" role="tab" aria-controls="pills-skills" aria-selected="false"><i class="bi bi-box"></i> SKILLS</a>
-          </li>
-          <li class="nav-item tabs-link">
-            <a class="btn btn-outline-dark" id="pills-education-tab" data-toggle="pill" href="#pills-education" role="tab" aria-controls="pills-education" aria-selected="false"><i class="bi bi-mortarboard"></i> EDUCATION</a>
-          </li>
-          
-        </ul>
+      <h1 class="typing-text" id="typingText"></h1>
+    </div>
+  </section>
 
-        <br>
+  <!-- About Section -->
+  <section id="about" class="section">
+<div class="container about-container">
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>I'm <strong>Benayu H. Priyanto</strong>, a former teacher currently seeking for new opportunities. <br>
+    <br> As a teacher, I've taught and assisted in arranging the curricula for middle school students in Science and Biology in accordance to the IB Middle Years Program (MYP). I also had experience in project management as a Duke of Edinburgh Coordinator, and set the school record for most students receiving their Bronze Award during my term as coordinator.
+    A project I finished as a teacher was to design an educational card game for the students to a great reception. <br>
+    <br> Academically, I contributed as a member of the Overton research group in order to research potential drug targets in multiple myeloma using synthetic lethal relationships in 2022. In 2017, I was a semifinalist in the i3L National Science Competition for a research in using keratin to reinforce bioplastics. <br>  
+    <br> I regularly write on Substack, and is actively pursuing a Masters in Biology. Let's keep in touch!
+</p>
 
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <h3></h3>
-            
-            <div class="row d-flex">
-              <div class="block-content col-sm-auto text-center"> 
-                <img class="profile rounded" src="./images/portrait.jpg" alt="Portrait of Benayu H Priyanto.">
-                <h4> <br>
-                  <i class="bi bi-envelope"></i>  <a
-                    href="mailto:benayu@gmail.com"
-                    class="contact"
-                    > benayu@gmail.com</a>
-                    <br>
-                    <i class="bi bi-telephone"></i> <a
-                    href="tel:+6287770635381"
-                    class="contact"
-                    > +6287770635381</a
-                  >
-                  <br> <i class="bi bi-geo-alt"></i> <b>Jakarta, Indonesia</b>
-                </h4>  
-              
-                
-                
-              
-              
-              </div>
+  </div>
+</div>
+  </section>
 
+  <!-- Projects Section -->
+  <section id="projects" class="section bg-light">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-img" src="./images/stroke_prediction_app.jpg" alt="Stroke Prediction App">
+          <h3>R: Stroke Prediction App</h3>
+          <p>Created a stroke prediction app with R. Trained on 6 different machine learning models and trained on a dataset of 5110 patients, the app can predict the probability of a patient having a stroke based on their health data.</p>
+          <a href="https://github.com/benayu/stroke-prediction-app">View More</a>
+        </div>
+        <div class="project-card">
+          <img class="project-img" src="./images/gene_network_analysis.jpg" alt="Gene Network analysis">
+          <h3>R: Gene Network Analysis</h3>
+          <p>Contributed to research with the Overton Group titled Predicting Cancer Vulnerabilities Using Gene Interaction Networks, in which a large dataset of multiple myeloma patients are analysed for potential gene targets for targeted therapies. The research was presented in ISMB 2024 Conference.</p>
+        </div>
+        <div class="project-card">
+          <img class="project-img" src="./images/ecosystem_card_game.png" alt="Ecosystem card game">
+          <h3>Teaching Materials: Ecosystem Card Game</h3>
+          <p>Designed an educational card game to teach to the concept of ecosystem to Year 7 students.  </p>
 
-              <div class="block-content col-8">
-                
-                    <p>
-                      Hello! <br>
-                      I'm <strong>Benayu</strong>, a former teacher currently seeking for new opportunities. <br>
-                      
-                      <br> As a teacher, I've taught and assisted in arranging the curricula for middle school students in Science and Biology in accordance to the IB Middle Years Program (MYP). I also had experience in project management as a Duke of Edinburgh Coordinator, and set the school record for most students receiving their Bronze Award during my term as coordinator.
-                      A project I finished as a teacher was to design an educational card game for the students to a great reception. <br>
+        </div>
+        
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+        <img class="project-img" src="./images/organisation_tool.png" alt="Organisation tool">
+          <h3>Python: Organisation Tool</h3>
+          <p>A Django app built for organisation and productivity: contains a clock with calendar, notes app, a to-do list, an addressbook app, and a gallery app. Built on Django 4.1.1 and uses MySQL database.</p>
 
-                      <br> Academically, I contributed as a member of the Overton research group in order to research potential drug targets in multiple myeloma using synthetic lethal relationships in 2022. In 2017, I was a semifinalist in the i3L National Science Competition for a research in using keratin to reinforce bioplastics. <br>
-                      
-                      <br> I regularly write on Substack, and is actively pursuing a Masters in Biology. Let's keep in touch!
+        </div>
+        <div class="project-card">
+          <img class="project-img" src="./images/duke_edinburgh_award.jpg" alt="Duke of Edinburgh Award">
+          <h3>Duke of Edinburgh Award</h3>
+          <p>Coordinated the Duke of Edinburgh program at Sekolah Victory Plus in years 2024-2025 as an Award Coordinator and Award Leader, thus helping 15-16 year olds achieve their Bronze Award by supervising their sections and organising their Practice and Qualifying Journeys.</p>
 
-                      
-                      
+        </div>
+        <div class="project-card">
 
-                      
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-                    </p>
-                <br>
-                <div class="container">
-                  <h4>
-                    <div class="row text-center">
-                      <div class="col-xs" style="padding-right: 2rem;">
-                        <a href="Resume.pdf"><i class="bi bi-filetype-pdf"></i> Resume</a> 
-                      </div>
-                      <div class="col-xs" style="padding-right: 2rem;">
-                        <a href="https://www.linkedin.com/in/benayu"><i class="bi bi-linkedin"></i> LinkedIn</a>
-                      </div>
-                      <div class="col-xs" style="padding-right: 2rem;">
-                        <a href="https://github.com/benayu"><i class="bi bi-github"></i> Github</a>
-                      </div>
-                      <div class="col-xs" style="padding-right: 2rem;">
-                        <a href="https://substack.com/@benayu"><i class="bi bi-substack"></i> Substack</a> 
-                      </div>
-                    </div>
-                </div>
-                  </h4> 
-              </div>
-
-            </div>
-          
-          </div>
-          <div class="tab-pane fade" id="pills-projects" role="tabpanel" aria-labelledby="pills-projects-tab">
-            <div class="block-content">
-              <div class="row d-flex">
-
-                <div class="card project-card">
-                  <img class="card-img-top project-img" src="./images/stroke_prediction_app.jpg" alt="Stroke Prediction App">
-                  <div class="card-body">
-                    <h6>R: Stroke Prediction App</h6>
-                    <p class="card-text-projects">
-                      Created a stroke prediction app with R. Trained on 6 different machine learning models and trained on a dataset of 5110 patients, the app can predict the probability of a patient having a stroke based on their health data.
-                    </p>
-                    <h5><br><a href="https://github.com/benayu/stroke-prediction-app">view more</a> </h5>
-                  </div>
-                </div>
-
-                <div class="card project-card">
-                  <img class="card-img-top project-img" src="./images/gene_network_analysis.jpg" alt="Gene Network analysis">
-                  <div class="card-body">
-                    <h6>R: Gene Network Analysis</h6>
-                    <p class="card-text-projects">
-                      Contributed to research with the Overton Group titled Predicting Cancer Vulnerabilities Using Gene Interaction Networks, in which a large dataset of multiple myeloma patients are analysed for potential gene targets for targeted therapies. The research was presented in ISMB 2024 Conference.
-                    </p>
-                  </div>
-                </div>
-
-
-                <div class="card project-card">
-                  <img class="card-img-top project-img" src="./images/organisation_tool.png" alt="Organisation tool">
-                  <div class="card-body">
-                    <h6>Python: Organisation Tool</h6>
-                    <p class="card-text-projects">
-                      A Django app built for organisation and productivity: contains a clock with calendar, notes app, a to-do list, an addressbook app, and a gallery app.
-                      Built on Django 4.1.1 and uses MySQL database.
-                      </p>
-                    <h5><br><a href="https://github.com/benayu/organisation_tool">view more</a> </h5>
-                  </div>
-                </div>
-
-
-                <div class="card project-card">
-                  <img class="card-img-top project-img" src="./images/ecosystem_card_game.png" alt="Ecosystem card game">
-                  <div class="card-body">
-                    <h6>Teaching Materials: Ecosystem Card Game</h6>
-                    <p class="card-text-projects">
-                      Designed an educational card game to teach to the concept of ecosystem to Year 7 students.  
-                    </p>
-                    
-                  </div>
-                </div>
-
-                <div class="card project-card">
-                  <img class="card-img-top project-img" src="./images/duke_edinburgh_award.jpg" alt="Duke of Edinburgh Award">
-                  <div class="card-body">
-                    <h6>Duke of Edinburgh Award</h6>
-                    <p class="card-text-projects">
-                      Coordinated the Duke of Edinburgh program at Sekolah Victory Plus in years 2024-2025 as an Award Coordinator and Award Leader, thus helping 15-16 year olds achieve their Bronze Award by supervising their sections and organising their Practice and Qualifying Journeys. 
-                    </p>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>  
-
-          </div>
-          <div class="tab-pane fade" id="pills-experience" role="tabpanel" aria-labelledby="pills-experience-tab">
-            <div class="block-content">
-
-              <h6>IB MYP Subject Teacher and Homeroom Teacher</h6>
-              <h5>2023-2025, BEKASI. INDONESIA</h5>
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <h3>IB MYP Subject Teacher and Homeroom Teacher</h3>
+              <h5>2023-2025, BEKASI, INDONESIA</h5>
               <p>
                 <ul>
                   <li>Taught the Secondary school (Grades 7-9) Science and Biology. </li>
                   <li>Designed assessments and unit plans following the IB MYP curriculum.</li>
-                  <li>Organised school events and excursions.</li>
-                  <ul>
-                    <li>Museum Anatomi Atmajaya</li>
-                    <li>Bronze Qualifying Journey to Lembah Pasir Sumbul</li>
-                    <li>STEM Fair 2025</li>
+                  <li>Organised school events and excursions, such as excursions to Museum Anatomi Atmajaya, Bronze Qualifying Journey to Lembah Pasir Sumbul, and STEM Fair 2025 event.</li>
                   </ul>
                 </ul>       
                </p>
-              </div>
-              <div class="block-content">
-              <h6>Personal Project Supervisor</h6>
-              <h5>2023-2025, BEKASI. INDONESIA</h5>
+               <br>
+      <h3>Personal Project Supervisor</h3>
+              <h5>2023-2025, BEKASI, INDONESIA</h5>
               <p>
                 <ul>
                   <li>Supervised Grade 10 MYP students in completing their Personal Project as part of the IB curriculum.</li>
                   <li>Assessed and moderated project reports in a variety of fields such as designing cars or formulating sunscreen. </li>
                 </ul> </p>
-              </div>
-              <div class="block-content">
-              <h6>Duke of Edinburgh Coordinator</h6>
-              <h5>2024-2025, BEKASI. INDONESIA</h5>
+            <br>
+      <h3>Duke of Edinburgh Coordinator</h3>
+              <h5>2024-2025, BEKASI, INDONESIA</h5>
               <p>
                 <ul>
                   <li>Coordinated 60 students to progress their Award for the Duke of Edinburgh Program.</li>
                   <li>Trained students for their Qualifying Journey.</li>
                   <li>Facilitated 19 students in receiving their Bronze Award within 6 months, tripling the amount of awardees in school history.</li>
                 </ul></p>
-              </div>
-            
-            
-            <div class="block-content">
-              <h6>Homework Club Tutor</h6>
+              <br>
+      <h3>Homework Club Tutor</h3>
               <h5>2019, BELFAST, UK</h5>
               <p> 
                 <ul>
                   <li>Tutored underprivileged and marginalised children at Horn of Africa People's Aid Northern Ireland (HAPANI) organisation. Students come from a wide age range, from secondary students who are taking their IGCSEs to primary students.</p></li>
                 </ul>
-            </div>
-            <div class="block-content">
-              <h6>LIYSF Delegate</h6>
+              <br>
+      <h3>LIYSF Delegate</h3>
               <h5>2017, LONDON, UK</h5>
               <p>
                 <ul>
                   <li>Was a London International Youth Science Forum delegate, presenting a research on bioplastics production using keratin extracted from chicken feathers. </p></li>
                 </ul> 
-            </div>
-            <div class="block-content">
-              <h6>First Aid Volunteer</h6>
+                <br>
+      <h3>First Aid Volunteer</h3>
               <h5>2017-2018, TANGERANG, INDONESIA</h5>
               <p>For the following events:
                 <ul>
@@ -242,301 +163,212 @@
                   <li>Bynamic Arts Festival, 2017</li>
                   <li>Beevolution Arts & Sports Festival 2017</li>
                 </ul>
-              </p>
-            </div>
-            
+    </div>
+  </section>
 
-          </div>
-          
-          <div class="tab-pane fade" id="pills-skills" role="tabpanel" aria-labelledby="pills-skills-tab">
-            <div class="block-content">
-              <h2><i class="bi bi-pencil"></i> Language Skills</h2>
-              <div class="row d-flex">
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>English fluency</h6>
-                      <h5>
-                        <ul><br>
-                          <li>TOEFL score 107/120 (2025)</li>
-                          <li>IELTS band score 8.0, Level C1 (2019)</li>
-                          <li>IELTS band score 8.5 (2023, internal assessment at Sekolah Victory Plus)</li>
-                        </ul>
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>Indonesian</h6>
-                      <h5><ul><br>
-                        <li> Native Speaker</li>
-                      </ul></h5>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>English: TOEFL 107/120 (2025), IELTS Band score 8.0 (2019) </li>
+        <li>ISO 17025:2017 Certification for laboratory management</li>
+        <li>Python: Data analysis (Pandas, Matplotlib), Web development (Django, Flask, REST APIs)</li>
+        <li>R: Statistical analysis (ggplot2, dplyr)</li>
+        <li>Laboratory techniques: ELISA, Western Blot, general lab skills</li>
+        <li>SPSS, SQLite, Canva, Google Workspace</li>
+        <li>Child Safeguarding: Level 2 DOE Award Training, TeachUp certificate</li>
+        <li>GRE test results: 318/340 (Q: 162, V: 156)</li>
+      </ul>
+    </div>
+  </section>
 
-            <div class="block-content">
-              <h2><i class="bi bi-droplet"></i> Clinical Skills</h2>
-              <div class="row d-flex">
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>ISO 17025:2017</h6>
-                      <h5>
-                        <ul><br>
-                          <li>Laboratory management system</li>
-                        </ul>
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>ELISA</h6>
-                      <h5>
-                        <ul><br>
-                          <li>Part of university degree</li>
-                          
-                        </ul>
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>Western Blot</h6>
-                      <h5>
-                        <ul><br>
-                          <li>Part of university degree</li>
-                          
-                        </ul>
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>General laboratory skills</h6>
-                      <h5>
-                        <ul><br>
-                          <li>Pipetting</li>
-                          <li>Aseptic techniques</li>
-                        </ul>
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-            
-            <div class="block-content">
-              <h2> <i class="bi bi-display"></i> Applications and Programming</h2>
-              <div class="row d-flex">
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>Python</h6>
-                      <h5>
-                        <ul><br>
-                          <li>Data analysis <br>(Pandas, Matplotlib)</li>
-                          <li>Web scraping <br>(beautifulsoup)</li>
-                          <li>Web Development <br>(Django, Flask, REST APIs)</li>
-                          <li>Database management <br>(SQLAlchemy)</li>
-                        </ul>  
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>Statistical R</h6>
-                      <h5><ul><br>
-                        <li>Data analysis <br>(ggplot2, dplyr) </li>
-                        </ul>  
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>SPSS</h6>
-                      <h5>
-                        <ul><br>
-                          <li>Part of university degree</li>
-                          
-                        </ul>
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>SQL</h6>
-                      <h5><ul><br>
-                        <li>SQLite </li>
-                        </ul>  
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>Applications</h6>
-                      <h5><ul><br>
-                        <li>Canva, Google Workspace </li>
-                        </ul>  
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-            <div class="block-content">
-              <h2> <i class="bi bi-grid-3x2-gap"></i> Other </h2>
-              <div class="row d-flex">
-
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>Child Safeguarding</h6>
-                      <h5>
-                        <ul><br>
-                          <li>Level 2 Duke of Edinburgh Award Delivery Training </li>
-                          <li>TeachUp certificate </li>                         
-                        </ul>
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>Strong Reasoning and Critical thinking skills</h6>
-                      <h5>
-                        <ul><br>
-                          <li>GRE test results: 318/340 (Q: 162, V: 156)</li>                         
-                        </ul>
-                      </h5>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card card-skills">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <h6>Communication skills</h6>
-                    </p>
-                  </div>
-                </div>
-
-
-                
-
-                
-                
-              </div>
-            </div>
-
-          </div>
-          
-          <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab">
-
-            <h2>Education</h2>
-            <div class="block-content">
-              <h6>Bsc. Biomedical Science at Queen's University Belfast</h6>
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+      
+              <h3>Bsc. Biomedical Science at Queen's University Belfast</h3>
             <h5>2019-2022, BELFAST, UK</h5>
             <p>Awarded the MHLS GREAT Scholarship worth £20,000.
-                <ul>
-                    <li>Dissertation title: Predicting Cancer Vulnerabilities using Gene Interaction Networks.</li>
-                </ul>
-            </p>
-            </div>
-            <div class="block-content">
-              <h6>Binus Serpong High School</h6>
+              <br>Dissertation title: Predicting Cancer Vulnerabilities using Gene Interaction Networks.                
+            </p><br>
+              <h3>Binus Serpong High School</h3>
               <h5>2016-2019, TANGERANG, INDONESIA</h5>
-                <ul>
-                  <li>CIE A Levels with Mathematics (A*), Biology (A), Chemistry (B), Physics (C), AS English (b) </li>
-                  <li>National Exam (UN) scores 337,5/400 </li>
-                </ul>
+              CIE A Levels with Mathematics (A*), Biology (A), Chemistry (B), Physics (C), AS English (b) 
+              <br> National Exam (UN) scores 337,5/400 
                 
-                  </p>
-              </div>
+                  </p><br>
+</div>
+</section>
+
+
+
+
+  <!-- Skills Section -->
+     <section id="awards" class="section bg-light">
+    <div class="container">
               <h2>Awards</h2>
-              <div class="block-content">
-                <h6>MHLS GREAT Scholarship</h6>
+                <h3>MHLS GREAT Scholarship</h3>
                 <h5>2019, INDONESIA</h5>
                 <p>A scholarship for Indonesian students studying biomedical science worth £20,000. </p>
-              </div>
-              <div class="block-content">
-                <h6>LIYSF Delegate</h6>
+            <br>
+                <h3>LIYSF Delegate</h3>
                 <h5>2017, LONDON, UK</h5>
                 <p>London International Youth Science Forum delegate. 
                   <br>Presented a team research project and attended forum presentations on various topics.
-                  <ul>
-                    <li>Research title: Effects of Keratin from Chicken Feather on Cassava Starch-based Bioplastic</li>
-                  </ul>
+                  <br>
+                    Research title: Effects of Keratin from Chicken Feather on Cassava Starch-based Bioplastic
+                  
                 </p>
-              </div>
-              <div class="block-content">
-                <h6>NMGBC Semifinalist</h6>
+              <br>
+                <h3>NMGBC Semifinalist</h3>
                 <h5>2017, JAKARTA, INDONESIA</h5>
                 <p>National Medical & General Biology Competition (NMGBC) is an annual competition held in University of Indonesia for young secondary students to assess their knowledge in medical and general biology. </p>
-              </div>
-              <div class="block-content">
-                <h6>i3L National Science Competition Semifinalist</h6>
+              <br>
+                <h3>i3L National Science Competition Semifinalist</h3>
               <h5>2017, JAKARTA, INDONESIA</h5>
               <p>
                 Indonesia International Institute for Life Sciences (i3L) Competition
                 Semifinalist. The institute regularly holds competitions for secondary students to showcase their research and talent. 
-                <ul>
-                    <li>Research title: Effects of Keratin from Chicken Feather on Cassava Starch-based Bioplastic</li>
-                </ul>
+                <br>Research title: Effects of Keratin from Chicken Feather on Cassava Starch-based Bioplastic
+    
               </p>
-              </div>
-              <div class="block-content">
-                <h6>CYS Pudak Young Scientist Competition Finalist - Third Place Winner</h6>
+            <br>
+                <h3>CYS Pudak Young Scientist Competition Finalist - Third Place Winner</h3>
               <h5>2017, Bandung, INDONESIA</h5>
               <p>
                 The Young Scientist Competition (Lomba Peneliti Belia) is an annual competition held by Pudak Scientific and Centre of Young Scientists to foster young talents in research. 
-                <ul>
-                    <li>Research title: Effects of Keratin from Chicken Feather on Cassava Starch-based Bioplastic</li>
-                </ul>
-                
-              </p>
-              </div>
-              
-              
+                <br> Research title: Effects of Keratin from Chicken Feather on Cassava Starch-based Bioplastic            
+</p>
+</div>    
+  </section>
 
-          </div>
-          
-        </div>
-        
-      </div>
+ <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact<br>
+
+      <a href="mailto:benayu@gmail.com"><i class="bi bi-envelope-fill"></i></a>                       
+      <a href="https://www.linkedin.com/in/benayu"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/benayu"><i class="bi bi-github"></i></a>
+      <a href="https://substack.com/@benayu"><i class="bi bi-substack"></i></a> 
+      </h2>
+  </section>
+
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Benayu H. Priyanto</p>
     </div>
+  </footer>
+<button id="scrollTopBtn" title="Go to top">↑</button>
+  <script>
+// Dark mode toggle
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+});
 
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.querySelector('.nav-links');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
 
+// Smooth scroll
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+    navLinks.classList.remove('active');
+  });
+});
+
+// Scroll to Top button
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show button when scrolling down
+window.onscroll = function() { scrollFunction(); };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+}
+
+// Click button to scroll to top
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Scrollspy + indicator
+// Refined Scrollspy + Indicator Logic
+const sections = document.querySelectorAll("section");
+const navLinksAll = document.querySelectorAll(".nav-links a");
+const indicator = document.querySelector(".nav-indicator");
+
+function updateActiveLink() {
+  let current = "";
+
+  sections.forEach(section => {
+    // Check if the section is in the viewport (with a 100px buffer)
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 100) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinksAll.forEach(link => {
+    link.classList.remove("active");
+    
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+
+      // Calculate position for the indicator
+      const parentRect = link.closest('.nav-links').getBoundingClientRect();
+      const linkRect = link.getBoundingClientRect();
+
+      indicator.style.width = `${linkRect.width}px`;
+      // Subtract parent left to get the local offset inside the nav list
+      indicator.style.left = `${linkRect.left - parentRect.left}px`;
+      indicator.style.opacity = "1";
+    }
+  });
   
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+  // Hide indicator if at the very top and no section is active
+  if (current === "" || window.scrollY < 50) {
+    indicator.style.opacity = "0";
+  }
+}
+
+window.addEventListener("scroll", updateActiveLink);
+window.addEventListener("resize", updateActiveLink); // Recalculate if window size changes
+window.addEventListener("load", updateActiveLink);
+
+const text = "Hello, I'm Benayu."; // The text to type
+const typingSpeed = 100;           // Milliseconds per character
+
+const typingElement = document.getElementById('typingText');
+
+let index = 0;
+
+function type() {
+  if (index < text.length) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(type, typingSpeed);
+  }
+}
+
+// Start typing when page loads
+window.addEventListener('load', type);
+  </script>
+</body>
 </html>
