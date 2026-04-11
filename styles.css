@@ -5,7 +5,12 @@
     padding: 0 1rem;  /* small horizontal padding for small screens */
 }
 
-/* Reset */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 8rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,16 +31,16 @@ body.dark {
 }
 
 h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .project-img {
-    width:100%;
-    max-width: 20rem;
-    height: 100%;
-    max-height: 10rem;
-    border: gray;
-    border-radius: 5%;
+  width: 100%;
+  height: auto;
+  max-height: 10rem;
+  object-fit: cover;
+  border: gray;
+  border-radius: 5%;
 }
 
 /* Navbar */
@@ -133,7 +138,6 @@ body.dark .logo {
   cursor: pointer;
 }
 
-/* Dark mode hamburger */
 body.dark .nav-toggle {
   background-color: inherit; /* dark mode background */
   color: #fff; /* icon color in dark mode */
@@ -206,7 +210,9 @@ body.dark h2 a {
 .projects-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  align-items: stretch;
+
 }
 
 .project-card {
@@ -215,7 +221,7 @@ body.dark h2 a {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s;
-  max-width: 23rem;
+  width: 95%;
   margin-bottom: 2rem;
 }
 
@@ -244,7 +250,6 @@ body.dark footer {
   border-top-color: #444;
 }
 
-/* Responsive */
 
 @media (max-width: 768px) {
   .nav-links {
@@ -273,11 +278,9 @@ body.dark footer {
   }
 }
 
-/* Dark mode support */
 
-/* Scroll to Top Button */
 #scrollTopBtn {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -318,12 +321,10 @@ body.dark #scrollTopBtn:hover {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Offset for Smooth Scroll (Adjust 70px to your navbar's height) */
 section {
   scroll-margin-top: 70px;
 }
 
-/* Ensure the nav-indicator is positioned relative to the nav container */
 .nav-right {
   position: relative;
 }
