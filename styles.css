@@ -289,36 +289,29 @@ body.dark footer {
 
 
 #scrollTopBtn {
-  display: none; 
+  display: none;
   position: fixed;
   bottom: 40px;
   right: 40px;
   z-index: 99;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   border: none;
   outline: none;
-  background-color: lightgray;
-  color: black;
   cursor: pointer;
-  padding: 0.5rem 0.8rem;
   border-radius: 10%;
-  transition: background 0.3s, transform 0.3s;
+  background-color: transparent;
 }
 
 #scrollTopBtn:hover {
-  background-color: slategray;
-
   transform: scale(1.1);
 }
 
 body.dark #scrollTopBtn {
-  background-color: #555;
+  /* background-color: #555; */
   color: #eee;
+  background-color: transparent;
 }
 
-body.dark #scrollTopBtn:hover {
-  background-color: #888;
-}
 
 /* Sticky Header*/
 #navbar {
