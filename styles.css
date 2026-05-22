@@ -182,23 +182,25 @@ h2 a {
   transition: color 0.3s; /* Smooth color change */
 }
 
-/* Optional: hover effect */
 h2 a:hover {
   color: gray;
 }
-
-
-/* Dark mode support */
 
 body.dark h2 a {
     color: white;
   }
 
 
+body.dark h2 a:hover {
+    color: gray;
+  }
+
+
+
 
 /* Hero */
 .hero {
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,31 +218,99 @@ body.dark h2 a {
 }
 
 /* Projects Grid */
+
+.projects-slider-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    .projects-grid {
+      scroll-behavior: smooth; /* Ensures smooth sliding animation */
+      overflow-x: auto;
+      scrollbar-width: none; /* Hides default scrollbar for Firefox */
+    }
+    .projects-grid::-webkit-scrollbar {
+      display: none; /* Hides default scrollbar for Chrome/Safari */
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.2s, color 0.3s;
+      color: #333;
+    }
+    .slider-btn:hover {
+      background: #ffffff;
+      transform: translateY(-50%) scale(1.1);
+    }
+    .btn-left { left: 15px; }
+    .btn-right { right: 15px; }
+
+    /* Dark Mode styling adjustments for buttons */
+    body.dark .slider-btn {
+      background: rgba(30, 30, 30, 0.85);
+      border-color: #444;
+      color: #fff;
+    }
+    body.dark .slider-btn:hover {
+      background: #252525;
+    }
+
+    /* Hide buttons on mobile to allow native fluid touch swipe */
+    @media (max-width: 768px) {
+      .slider-btn { display: none; }
+    }
+
+.projects-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin: 2rem;
+  gap: 16px;
+  scrollbar-width: none;
+}
+
+.projects-grid::-webkit-scrollbar {
+  display: none;
+  }
+
+
+/* 
 .projects-grid {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   align-items: stretch;
 
-}
+} */
 
-.project-card {
+.project-card { 
+  flex: auto;
+  flex-shrink: 0;
+  max-width: 300px;
   padding: 1.5rem 1.5rem 3rem 1.5rem;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
   width: 95%;
-  margin-bottom: 2rem;
 }
 
 body.dark .project-card {
   background: #222;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-}
 
 .project-card a {
   display: inline-block;
@@ -248,15 +318,36 @@ body.dark .project-card {
   color: lightslategray;
 }
 
-/* Footer */
-footer {
-  padding: 2rem;
-  text-align: center;
-  border-top: 1px solid #ddd;
+.project-card p {
+  font-size: small;
 }
 
-body.dark footer {
-  border-top-color: #444;
+.project-card img {
+  height: 20rem;
+}
+
+.projects {
+  position: relative;
+}
+
+.nav-btn {
+position:absolute;
+top: 50%;
+transform: translateY(-50%);
+border: none;
+cursor: pointer;
+z-index: 10;
+color: #000000;
+background-color: transparent;
+font-size: xx-large;
+}
+
+.nav-btn.left {
+left: 5rem;
+}
+
+.nav-btn.right {
+right: 5rem;
 }
 
 
