@@ -212,117 +212,156 @@ body.dark h2 a:hover {
 }
 
 /* Projects Grid */
-
+/* Container holding the slideshow and the buttons absolute to it */
 .projects-slider-wrapper {
-      position: relative;
-      display: flex;
-      align-items: center;
-      width: 100%;
-    }
-    .projects-grid {
-      scroll-behavior: smooth; /* Ensures smooth sliding animation */
-      overflow-x: auto;
-      scrollbar-width: none; /* Hides default scrollbar for Firefox */
-    }
-    .projects-grid::-webkit-scrollbar {
-      display: none; /* Hides default scrollbar for Chrome/Safari */
-    }
-    .slider-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid #ccc;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: background 0.3s, transform 0.2s, color 0.3s;
-      color: #333;
-    }
-    .slider-btn:hover {
-      background: #ffffff;
-      transform: translateY(-50%) scale(1.1);
-    }
-    .btn-left { left: 15px; }
-    .btn-right { right: 15px; }
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 
-    /* Dark Mode styling adjustments for buttons */
-    body.dark .slider-btn {
-      background: rgba(30, 30, 30, 0.85);
-      border-color: #444;
-      color: #fff;
-    }
-    body.dark .slider-btn:hover {
-      background: #252525;
-    }
+/* Act as the 'window' that cuts off the other cards */
+.projects-slider-track {
+  width: 100%;
+  overflow: hidden; 
+}
 
-    /* Hide buttons on mobile to allow native fluid touch swipe */
-    @media (max-width: 768px) {
-      .slider-btn { display: none; }
-    }
-
+/* The long row holding all your cards side by side */
 .projects-grid {
   display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  margin: 2rem;
-  gap: 16px;
-  scrollbar-width: none;
+  transition: transform 0.4s ease-in-out; /* Smooth sliding effect */
+  width: 100%;
 }
 
-.projects-grid::-webkit-scrollbar {
-  display: none;
+/* ==========================================================================
+   MOBILE DEFAULT (Keeps 30px side margins)
+   ========================================================================== */
+.project-card {
+  min-width: calc(100vw - 60px);
+  max-width: calc(100vw - 60px);
+  box-sizing: border-box;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column; 
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+
+.project-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* ==========================================================================
+   DESKTOP: Increased margins (Screens 768px and wider)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .project-card {
+    flex-direction: row;
+    align-items: stretch;
+    max-height: 450px; 
+
+    /* 
+       NEW: 100px margins on left + 100px on right = 200px 
+    */
+    min-width: calc(100vw - 200px);
+    max-width: calc(100vw - 200px);
+    margin: 0 100px; 
   }
 
+  .project-img {
+    width: 45%;
+    height: 100%;
+    min-height: 350px;
+  }
 
-/* 
-.projects-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  align-items: stretch;
-
-} */
-
-.project-card { 
-  flex: auto;
-  flex-shrink: 0;
-  max-width: 300px;
-  padding: 1.5rem 1.5rem 3rem 1.5rem;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 95%;
+  .project-content {
+    width: 55%;
+    padding: 40px;
+  }
 }
 
+/* Target the main section container to change the light background to dark */
+body.dark #projects.projects.section {
+  background-color: #121212 !important; /* Overrides the .bg-light bootstrap utility */
+}
+
+/* Update section title color */
+body.dark #projects h2 {
+  color: #f8f9fa;
+}
+
+/* Style the cards for dark mode */
 body.dark .project-card {
-  background: #222;
+  background-color: #1e1e1e; /* Dark gray surface color for cards */
+  border: 1px solid #2d2d2d;  /* Soft border to give it dimension */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow for dark mode contrast */
+}
+
+/* Adjust text inside the card for readability */
+body.dark .project-content h3 {
+  color: #ffffff;
+}
+
+body.dark .project-content p {
+  color: #b0b3b8; /* Muted light gray so it's easy on the eyes */
+}
+
+/* Style links/buttons for dark mode visibility */
+body.dark .project-content a {
+  color: #4da6ff; /* A slightly brighter blue for accessibility compliance */
+}
+
+/* Adjust the slider arrows so they stand out against the dark background */
+body.dark .slider-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+body.dark .slider-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 
-.project-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: lightslategray;
+
+
+body.dark  p {
+  color: #b0b3b8; /* Muted light gray so it's easy on the eyes */
 }
 
-.project-card p {
-  font-size: small;
+body.dark li {
+  color: #b0b3b8; /* Muted light gray so it's easy on the eyes */
 }
 
-.project-card img {
-  height: 20rem;
+
+/* Navigation Button Styling */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
-.projects {
-  position: relative;
-}
+.btn-left { left: 10px; }
+.btn-right { right: 10px; }
+
 
 .nav-btn {
 position:absolute;

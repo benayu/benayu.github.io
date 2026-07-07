@@ -53,53 +53,78 @@
     </div>
   </section>
 
-  <!-- Projects Section  -->
-  <section id="projects" class="projects section bg-light">
-    <div class="container"><h2><i class="bi bi-box"></i> Projects</h2></div>
+  <!-- Projects Section  --><section id="projects" class="projects section bg-light">
+  <div class="container">
+    <h2><i class="bi bi-box"></i> Projects</h2>
+  </div>
 
-   <div class="projects-slider-wrapper">
-      <!-- Left Navigation Button -->
-      <button class="slider-btn btn-left" id="slideLeft" aria-label="Slide left">
-        <i class="bi bi-chevron-left"></i>
-      </button>
+  <div class="projects-slider-wrapper">
+    <!-- Left Navigation Button -->
+    <button class="slider-btn btn-left" id="slideLeft" aria-label="Slide left">
+      <i class="bi bi-chevron-left"></i>
+    </button>
 
-    <div class="projects-grid" id="projects-container">
-      <div class="project-card">
-        <img class="project-img" src="./images/stroke_prediction_app.jpg" alt="Stroke Prediction App">
-        <h3>R: Stroke Prediction App</h3>
-        <p>Created a stroke prediction app with R. Trained on 6 different machine learning models and trained on a dataset of 5110 patients, the app can predict the probability of a patient having a stroke based on their health data.</p>
-        <a href="https://github.com/benayu/stroke-prediction-app">View More</a>
-      </div>
-      
-      <div class="project-card">
-        <img class="project-img" src="./images/gene_network_analysis.jpg" alt="Gene Network analysis">
-        <h3>R: Gene Network Analysis</h3>
-        <p>Contributed to research with the Overton Group titled Predicting Cancer Vulnerabilities Using Gene Interaction Networks, in which a large dataset of multiple myeloma patients are analysed for potential gene targets for targeted therapies. The research was presented in ISMB 2024 Conference.</p>
-      </div>
-      
-      <div class="project-card">
-        <img class="project-img" src="./images/ecosystem_card_game.png" alt="Ecosystem card game">
-        <h3>Teaching Materials: Ecosystem Card Game</h3>
-        <p>Designed an educational card game to teach to the concept of ecosystem to Year 7 students.</p>
-      </div>
+    <!-- The Window -->
+    <div class="projects-slider-track">
+      <!-- The Long Row of Cards -->
+      <div class="projects-grid" id="projects-container">
+        <div class="project-card">
+          <img class="project-img" src="./images/stroke_prediction_app.jpg" alt="Stroke Prediction App">
+          <div class="project-content">
+            <h3>R: Stroke Prediction App</h3>
+            <p>Created a stroke prediction app with R. Trained on 6 different machine learning models and trained on a dataset of 5110 patients, the app can predict the probability of a patient having a stroke based on their health data.</p>
+            <a href="https://github.com/benayu/stroke-prediction-app">View More</a>
+          </div>
+          
+        </div>
+        
+        <div class="project-card">            
+          <img class="project-img" src="./images/gene_network_analysis.jpg" alt="Gene Network analysis">
 
-      <div class="project-card">
-        <img class="project-img" src="./images/organisation_tool.png" alt="Organisation tool">
-        <h3>Python: Organisation Tool</h3>
-        <p>A Django app built for organisation and productivity: contains a clock with calendar, notes app, a to-do list, an addressbook app, and a gallery app. Built on Django 4.1.1 and uses MySQL database.</p>
-        <a href="https://github.com/benayu/organisation_tool">View More</a>
-      </div>
+          <div class="project-content">
+          <h3>R: Gene Network Analysis</h3>
+          <p>Contributed to research with the Overton Group titled Predicting Cancer Vulnerabilities Using Gene Interaction Networks, in which a large dataset of multiple myeloma patients are analysed for potential gene targets for targeted therapies. The research was presented in ISMB 2024 Conference.</p>
 
-      <div class="project-card">
-        <img class="project-img" src="./images/duke_edinburgh_award.jpg" alt="Duke of Edinburgh Award">
-        <h3>Duke of Edinburgh Award</h3>
-        <p>Coordinated the Duke of Edinburgh program at Sekolah Victory Plus in years 2024-2025 as an Award Coordinator and Award Leader, thus helping 15-16 year olds achieve their Bronze Award by supervising their sections and organising their Practice and Qualifying Journeys.</p>
+          </div>
+          </div>
+        
+        <div class="project-card">          
+          <img class="project-img" src="./images/ecosystem_card_game.png" alt="Ecosystem card game">
+
+          <div class="project-content">
+            <h3>Teaching Materials: Ecosystem Card Game</h3>
+          <p>Designed an educational card game to teach to the concept of ecosystem to Year 7 students.</p>
+          </div>
+          
+        </div>
+
+        <div class="project-card">
+          <img class="project-img" src="./images/organisation_tool.png" alt="Organisation tool">
+          <div class="project-content">
+            <h3>Python: Organisation Tool</h3>
+          <p>A Django app built for organisation and productivity: contains a clock with calendar, notes app, a to-do list, an addressbook app, and a gallery app. Built on Django 4.1.1 and uses MySQL database.</p>
+          <a href="https://github.com/benayu/organisation_tool">View More</a>
+          </div>
+          
+        </div>
+
+        <div class="project-card">
+          <img class="project-img" src="./images/duke_edinburgh_award.jpg" alt="Duke of Edinburgh Award">
+          <div class="project-content">
+            <h3>Duke of Edinburgh Award</h3>
+          <p>Coordinated the Duke of Edinburgh program at Sekolah Victory Plus in years 2024-2025 as an Award Coordinator and Award Leader, thus helping 15-16 year olds achieve their Bronze Award by supervising their sections and organising their Practice and Qualifying Journeys.</p>
+        
+          </div>
+          </div>
       </div>
     </div>
+
+    <!-- Right Navigation Button -->
     <button class="slider-btn btn-right" id="slideRight" aria-label="Slide right">
-        <i class="bi bi-chevron-right"></i></button>
-        </div>
-  </section>
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  </div>
+</section>
 
   <!-- Experience Section  -->
   <section id="experience" class="section">
@@ -235,22 +260,46 @@
   <button id="scrollTopBtn" title="Go to top"><i class="bi bi-arrow-up-circle"></i></button>
 
   <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("projects-container");
+  const btnLeft = document.getElementById("slideLeft");
+  const btnRight = document.getElementById("slideRight");
+  const cards = document.querySelectorAll(".project-card");
+  
+  let currentIndex = 0;
 
-    // Button-triggered smooth scroll for projects grid
-    const container = document.getElementById('projects-container');
-    const slideLeftBtn = document.getElementById('slideLeft');
-    const slideRightBtn = document.getElementById('slideRight');
+ function updateSlider() {
+    // 1. Determine total side margins based on window width
+    // If window width is 768px or greater, total margin gap is 200px. Otherwise, it's 60px.
+    const totalMarginGap = window.innerWidth >= 768 ? 200 : 60;
+    
+    // 2. Calculate the exact step distance (Card width + the total gap between items)
+    const cardWidth = cards[0].getBoundingClientRect().width + totalMarginGap;
+    
+    // 3. Shift the row smoothly
+    container.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+  }
 
-    // Amount of pixels to slide upon clicking a button
-    const scrollAmount = 340; 
+  btnRight.addEventListener("click", () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateSlider();
+  });
 
-    slideLeftBtn.addEventListener('click', () => {
-      container.scrollLeft -= scrollAmount;
-    });
+  btnLeft.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = cards.length - 1;
+    }
+    updateSlider();
+  });
 
-    slideRightBtn.addEventListener('click', () => {
-      container.scrollLeft += scrollAmount;
-    });
+  window.addEventListener("resize", updateSlider);
+});
 
     // Dark mode toggle
     const themeToggle = document.getElementById('themeToggle');
