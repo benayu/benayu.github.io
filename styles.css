@@ -5,6 +5,7 @@
     padding: 0 1rem;  /* small horizontal padding for small screens */
 }
 
+
 @media (min-width: 1000px) {
   .container {
     padding: 0 10rem;
@@ -90,20 +91,13 @@ body.dark .logo {
   justify-content: space-between;
 }
 
-/* Left side */
-.nav-left .logo {
-  font-weight: 600;
-  text-decoration: none;
-  color: inherit;
-  font-size: 1rem;
-}
 
-/* Right side (everything inline) */
+/* Right side (everything inline)
 .nav-right {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
+} */
 
 /* Links inline */
 .nav-links {
@@ -139,18 +133,18 @@ body.dark .logo {
 
 
 /* Mobile toggle hidden on desktop */
-.nav-toggle {
+/* .nav-toggle {
   display: none;
   font-size: 1.3rem;
   background: none;
   border: none;
   cursor: pointer;
-}
+} */
 
-body.dark .nav-toggle {
-  background-color: inherit; /* dark mode background */
-  color: #fff; /* icon color in dark mode */
-}
+/* body.dark .nav-toggle {
+  background-color: inherit; 
+  color: #fff; 
+} */
 
 /* Sections */
 .section {
@@ -351,33 +345,6 @@ right: 5rem;
 }
 
 
-@media (max-width: 1000px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    flex-direction: column;
-    background: #ffffff; /* light mode background */;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-
-  body.dark .nav-links {
-    background: #1a1a1a; /* light mode background */;
-    border-color: #444;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-}
-
 
 #scrollTopBtn {
   display: none;
@@ -416,18 +383,6 @@ body.dark #scrollTopBtn {
 
 section {
   scroll-margin-top: 70px;
-}
-
-.nav-right {
-  position: relative;
-}
-
-.nav-indicator {
-  position: absolute;
-  bottom: -5px;
-  height: 3px;
-  background-color: grey;
-  transition: all 0.3s ease-in-out;
 }
 
 .nav-links a.active {

@@ -15,26 +15,21 @@
   <!-- Navbar -->
   <nav id="navbar">
     <div class="nav-container">
-      <div class="nav-left">
-        <a href="#home" class="logo">Benayu</a>
-      </div>
 
-      <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#awards">Awards</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home"><i class="bi bi-house"></i></a></li>
+          <li><a href="#about"><i class="bi bi-question-circle"></i></a></li>
+          <li><a href="#projects"><i class="bi bi-box"></i></a></li>
+          <li><a href="#experience"><i class="bi bi-briefcase"></i></a></li>
+          <li><a href="#skills"><i class="bi bi-gear"></i></a></li>
+          <li><a href="#education"><i class="bi bi-building"></i></a></li>
+          <li><a href="#awards"><i class="bi bi-trophy"></i></a></li>
+          <li><a href="#contact"><i class="bi bi-envelope"></i></a></li>
         </ul>
 
         <button id="themeToggle"><i class="bi bi-moon-fill" title="Night mode"></i></button>
-        <button class="nav-toggle" id="navToggle">&#9776;</button>
-        <span class="nav-indicator"></span>
+        <!-- <button class="nav-toggle" id="navToggle">&#9776;</button> -->
       </div>
-    </div>
   </nav>
 
   <!-- Hero Section -->
@@ -60,7 +55,7 @@
 
   <!-- Projects Section  -->
   <section id="projects" class="projects section bg-light">
-    <div class="container"><h2>Projects</h2></div>
+    <div class="container"><h2><i class="bi bi-box"></i> Projects</h2></div>
 
    <div class="projects-slider-wrapper">
       <!-- Left Navigation Button -->
@@ -109,7 +104,7 @@
   <!-- Experience Section  -->
   <section id="experience" class="section">
     <div class="container">
-      <h2>Experience</h2>
+      <h2><i class="bi bi-briefcase"></i> Experience</h2>
       <h3>IB MYP Subject Teacher and Homeroom Teacher</h3>
       <h5>2023-2025, SEKOLAH VICTORY PLUS BEKASI, INDONESIA</h5>
       <ul class="body-list">
@@ -165,7 +160,7 @@
   <!-- Skills Section  -->
   <section id="skills" class="section bg-light">
     <div class="container">
-      <h2>Skills</h2>
+      <h2><i class="bi bi-gear"></i> Skills</h2>
       <ul class="body-list">
         <li>English: TOEFL 107/120 (2025) <a href="files/TOEFL.pdf"><i class="bi bi-box-arrow-up-right"></i></a>, IELTS Band score 8.0 (2019) <a href="files/IELTS.pdf"><i class="bi bi-box-arrow-up-right"></i></a></li>
         <li>ISO 17025:2017 <a href="files\ISO170252017.pdf"><i class="bi bi-box-arrow-up-right"></i></a> Certification for laboratory management</li>
@@ -182,7 +177,7 @@
   <!-- Education Section  -->
   <section id="education" class="section">
     <div class="container">
-      <h2>Education</h2>
+      <h2><i class="bi bi-building"></i> Education</h2>
       <h3>Bsc. Biomedical Science at Queen's University Belfast</h3>
       <h5>2019-2022, BELFAST, UK</h5>
       <p>Awarded the MHLS GREAT Scholarship worth £20,000.<br>Dissertation title: Predicting Cancer Vulnerabilities using Gene Interaction Networks.</p>
@@ -198,7 +193,7 @@
   <!-- Awards Section -->
   <section id="awards" class="section bg-light">
     <div class="container">
-      <h2>Awards</h2>
+      <h2><i class="bi bi-trophy"></i> Awards</h2>
       <h3>MHLS GREAT Scholarship</h3>
       <h5>2019, INDONESIA</h5>
       <p>A scholarship for Indonesian students studying biomedical science worth £20,000.</p>
@@ -229,7 +224,7 @@
   <section id="contact" class="section hero contact">
     <div class="container">
       <h2>Contact<br>
-        <a href="mailto:benayu@gmail.com"><i class="bi bi-envelope-fill" title="Email"></i></a>                     
+        <a href="mailto:benayu@gmail.com"><i class="bi bi-envelope-at-fill" title="Email"></i></a>                     
         <a href="https://www.linkedin.com/in/benayu"><i class="bi bi-linkedin" title="LinkedIn"></i></a>
         <a href="https://github.com/benayu"><i class="bi bi-github" title="Github"></i></a>
         <a href="https://substack.com/@benayu"><i class="bi bi-substack" title="Substack"></i></a> 
@@ -265,21 +260,21 @@
     });
 
     // Mobile nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.querySelector('.nav-links');
-    navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    // const navToggle = document.getElementById('navToggle');
+    // const navLinks = document.querySelector('.nav-links');
+    // navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
 
     // Smooth scroll
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        navLinks.classList.remove('active');
-      });
+ document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
     });
+    // Removed the navLinks line since you aren't toggling a mobile menu anymore!
+  });
+});
 
     // Scroll to Top button
     const scrollTopBtn = document.getElementById("scrollTopBtn");
@@ -299,48 +294,6 @@
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-    // Scrollspy + indicator
-    const sections = document.querySelectorAll("section");
-    const navLinksAll = document.querySelectorAll(".nav-links a");
-    const indicator = document.querySelector(".nav-indicator");
-
-    function updateActiveLink() {
-      let current = "";
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 100) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinksAll.forEach(link => {
-        link.classList.remove("active");
-        
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active");
-
-          // Calculate position for the indicator
-          const parentRect = link.closest('.nav-links').getBoundingClientRect();
-          const linkRect = link.getBoundingClientRect();
-
-          indicator.style.width = `${linkRect.width}px`;
-          // Subtract parent left to get the local offset inside the nav list
-          indicator.style.left = `${linkRect.left - parentRect.left}px`;
-          indicator.style.opacity = "1";
-        }
-      });
-      
-      // Hide indicator if at the very top and no section is active
-      if (current === "" || window.scrollY < 50) {
-        indicator.style.opacity = "0";
-      }
-    }
-
-    window.addEventListener("scroll", updateActiveLink);
-    window.addEventListener("resize", updateActiveLink); // Recalculate if window size changes
-    window.addEventListener("load", updateActiveLink);
 
     const text = "Hello, I'm Benayu."; // The text to type
     const typingSpeed = 100;           // Milliseconds per character
