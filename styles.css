@@ -45,14 +45,6 @@ body.dark a{
 }
 
 
-.project-img {
-  width: 100%;
-  height: auto;
-  max-height: 10rem;
-  object-fit: cover;
-  border: 1px solid #CCCCCC;
-  border-radius: 5%;
-}
 
 .bi .bi-moon-fill {
   color: #333333
@@ -92,14 +84,6 @@ body.dark .logo {
   justify-content: space-between;
 }
 
-
-/* Right side (everything inline)
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-} */
-
 /* Links inline */
 .nav-links {
   display: flex;
@@ -137,8 +121,6 @@ body.dark .logo {
 }
 
 
-/* Contact */
-
 .contact {
   display: flex;
   flex-direction: column;
@@ -167,9 +149,6 @@ body.dark h2 a:hover {
     color: #CCCCCC;
   }
 
-
-
-
 /* Hero */
 .hero {
   min-height: 90vh;
@@ -190,12 +169,6 @@ body.dark h2 a:hover {
 }
 
 
-.projects-tabs-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 2rem 0 2rem 0;
-}
 
 .badge {
   padding: 0.5rem 1rem;
@@ -217,21 +190,34 @@ body.dark .badge {
   border-color: #777777;
 }
 
-.project-tab-badge {
+.project-img {
+  width: 100%;
+  height: auto;
+  max-height: 10rem;
+  object-fit: cover;
+  border: 1px solid #CCCCCC;
+  border-radius: 5%;
+}
+
+.project-tab-badge,
+.experience-tab-badge {
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.project-tab-badge:hover {
+.project-tab-badge:hover,
+.experience-tab-badge:hover {
   border-color: #999999;
   background-color: #CCCCCC;
 }
 
-.project-tab-badge.active {
+.project-tab-badge.active,
+.experience-tab-badge.active {
   background-color: #666666;
   color: #EEEEEE;
   border-color: #333333;
 }
+
 
 body.dark .project-tab-badge:hover {
   background-color: #666666;
@@ -244,17 +230,20 @@ body.dark .badge.active {
   border-color: #999999;
 }
 
-body.dark .project-tab-badge:hover {
+body.dark .project-tab-badge:hover,
+body.dark .experience-tab-badge:hover {
   border-color: #999999;
 }
 
-body.dark .project-tab-badge.active {
+body.dark .project-tab-badge.active,
+body.dark .experience-tab-badge.active {
   background-color: #CCCCCC;
   color: #333333;
   border-color: #999999;
 }
 
-.project-card {
+.project-card,
+.experience-card {
   display: none;
   box-sizing: border-box;
   flex-direction: column; 
@@ -262,11 +251,17 @@ body.dark .project-tab-badge.active {
   overflow: hidden;
 }
 
-body.dark .project-card {
+.experience-card {
+  padding: 1.25rem;
+}
+
+body.dark .project-card,
+body.dark .experience-card {
   border: 0.0625rem solid #666666;
 }
 
-.project-card.active {
+.project-card.active,
+.experience-card.active {
   display: flex;
   border: 1px solid #CCCCCC;
   border-radius: 2rem;
@@ -288,11 +283,11 @@ body.dark .project-card {
 }
 
 
-.skills-badges {
+.tabs-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 0.5rem;
+  margin: 1rem 0rem 1rem 0rem;
 }
 
 .content-container {
@@ -311,7 +306,6 @@ body.dark .content-container {
 
 }
 
-
 body.dark  p {
   color: #CCCCCC; 
 }
@@ -319,29 +313,6 @@ body.dark  p {
 body.dark li {
   color: #CCCCCC; 
 }
-
-
-.nav-btn {
-position:absolute;
-top: 50%;
-transform: translateY(-50%);
-border: none;
-cursor: pointer;
-z-index: 10;
-color: #333333;
-background-color: transparent;
-font-size: xx-large;
-}
-
-.nav-btn.left {
-left: 5rem;
-}
-
-.nav-btn.right {
-right: 5rem;
-}
-
-
 
 #scrollTopBtn {
   display: none;

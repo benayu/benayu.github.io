@@ -28,11 +28,10 @@
         </ul>
 
         <button id="themeToggle"><i class="bi bi-moon-fill" title="Night mode"></i></button>
-        <!-- <button class="nav-toggle" id="navToggle">&#9776;</button> -->
       </div>
   </nav>
 
-  <!-- Hero Section -->
+
   <section id="home" class="section hero">
     <div class="container">
       <h1 class="typing-text" id="typingText"></h1>
@@ -40,7 +39,6 @@
     </div>
   </section>
 
-  <!-- About Section  -->
   <section id="about" class="section">
     <div class="container">
       <h2>About Me</h2>
@@ -53,12 +51,11 @@
     </div>
   </section>
 
-  <!-- Projects Section  --><section id="projects" class="projects section">
+  <section id="projects" class="projects section">
   <div class="container">
     <h2><i class="bi bi-box"></i> Projects</h2>
     
-    <!-- Project Tabs -->
-    <div class="projects-tabs-container">
+    <div class="tabs-container">
       <button class="badge project-tab-badge active" data-tab="0">R: Stroke Prediction App</button>
       <button class="badge project-tab-badge" data-tab="1">R: Gene Network Analysis</button>
       <button class="badge project-tab-badge" data-tab="2">Ecosystem Card Game</button>
@@ -74,24 +71,20 @@
             <p>Created a stroke prediction app with R. Trained on 6 different machine learning models and trained on a dataset of 5110 patients, the app can predict the probability of a patient having a stroke based on their health data.</p>
             <a href="https://github.com/benayu/stroke-prediction-app">View</a>
           </div>
-          
         </div>
         
         <div class="project-card">            
           <img class="project-img" src="./images/gene_network_analysis.jpg" alt="Gene Network analysis">
-
           <div class="project-content">
           <h3>R: Gene Network Analysis</h3>
           <p>Contributed to research with the Overton Group titled Predicting Cancer Vulnerabilities Using Gene Interaction Networks, in which a large dataset of multiple myeloma patients are analysed for potential gene targets for targeted therapies. The research was presented in ISMB 2024 Conference.</p>
-
           </div>
           </div>
         
         <div class="project-card">          
           <img class="project-img" src="./images/ecosystem_card_game.png" alt="Ecosystem card game">
-
           <div class="project-content">
-            <h3>Teaching Materials: Ecosystem Card Game</h3>
+          <h3>Teaching Materials: Ecosystem Card Game</h3>
           <p>Designed an educational card game to teach to the concept of ecosystem to Year 7 students.</p>
           </div>
           
@@ -120,63 +113,71 @@
 
 </section>
 
-  <!-- Experience Section  -->
   <section id="experience" class="section">
     <div class="container">
       <h2><i class="bi bi-briefcase"></i> Experience</h2>
-
-      <div class="content-container">
-      <h3>IB MYP Subject Teacher and Homeroom Teacher</h3>
-      <h5>2023-2025, SEKOLAH VICTORY PLUS BEKASI, INDONESIA</h5>
-      <ul class="body-list">
-        <li>Taught the Secondary school (Grades 7-9) Science and Biology.</li>
-        <li>Designed assessments and unit plans following the IB MYP curriculum.</li>
-        <li>Organised school events and excursions, such as excursions to Museum Anatomi Atmajaya, Bronze Qualifying Journey to Lembah Pasir Sumbul, and STEM Fair 2025 event.</li>
-      </ul>       
-      <br>
-
-      <h3>Personal Project Supervisor</h3>
-      <h5>2023-2025, SEKOLAH VICTORY PLUS BEKASI, INDONESIA</h5>
-      <ul class="body-list">
-        <li>Supervised Grade 10 MYP students in completing their Personal Project as part of the IB curriculum.</li>
-        <li>Assessed and moderated project reports in a variety of fields such as designing cars or formulating sunscreen.</li>
-      </ul>
-      <br>
-
-      <h3>Duke of Edinburgh Coordinator</h3>
-      <h5>2024-2025, SEKOLAH VICTORY PLUS BEKASI, INDONESIA</h5>
-      <ul class="body-list">
-        <li>Coordinated 60 students to progress their Award for the Duke of Edinburgh Program.</li>
-        <li>Trained students for their Qualifying Journey.</li>
-        <li>Facilitated 19 students in receiving their Bronze Award within 6 months, tripling the amount of awardees in school history.</li>
-      </ul>
-      <br>
-
-      <h3>Homework Club Tutor</h3>
-      <h5>2019, HAPANI BELFAST, UK</h5>
-      <ul class="body-list">
-        <li>Tutored underprivileged and marginalised children at Horn of Africa People's Aid Northern Ireland (HAPANI) organisation. Students come from a wide age range, from secondary students who are taking their IGCSEs to primary students.</li>
-      </ul>
-      <br>
-
-      <h3>LIYSF Delegate</h3>
-      <h5>2017, LONDON, UK</h5>
-      <ul class="body-list">
-        <li>Was a London International Youth Science Forum delegate, presenting a research on bioplastics production using keratin extracted from chicken feathers.</li>
-      </ul> 
-      <br>
       
-      <h3>First Aid Volunteer</h3>
-      <h5>2017-2018, BINUS SERPONG, INDONESIA</h5>
-      <p>For the following events:</p>
-      <ul class="body-list">
-        <li>Binus Archery Competition, 2017</li>
-        <li>Binus Amazing Race, 2017</li>
-        <li>Bynamic Arts Festival, 2017</li>
-        <li>Beevolution Arts & Sports Festival 2017</li>
-      </ul>
+      <div class="tabs-container">
+        <button class="badge experience-tab-badge active" data-tab="0">2023-2025</button>
+        <button class="badge experience-tab-badge" data-tab="1">2017-2019</button>
+      </div>
 
-    </div>
+      <div class="experience-container" id="experience-container">
+        <div class="experience-card active">
+          <h3>IB MYP Subject Teacher and Homeroom Teacher</h3>
+          <h5>2023-2025, SEKOLAH VICTORY PLUS BEKASI, INDONESIA</h5>
+            <ul class="body-list">
+              <li>Taught the Secondary school (Grades 7-9) Science and Biology.</li>
+              <li>Designed assessments and unit plans following the IB MYP curriculum.</li>
+              <li>Organised school events and excursions, such as excursions to Museum Anatomi Atmajaya, Bronze Qualifying Journey to Lembah Pasir Sumbul, and STEM Fair 2025 event.</li>
+            </ul>       
+            <br>
+
+            <h3>Personal Project Supervisor</h3>
+            <h5>2023-2025, SEKOLAH VICTORY PLUS BEKASI, INDONESIA</h5>
+            <ul class="body-list">
+              <li>Supervised Grade 10 MYP students in completing their Personal Project as part of the IB curriculum.</li>
+              <li>Assessed and moderated project reports in a variety of fields such as designing cars or formulating sunscreen.</li>
+            </ul>
+            <br>
+
+            <h3>Duke of Edinburgh Coordinator</h3>
+            <h5>2024-2025, SEKOLAH VICTORY PLUS BEKASI, INDONESIA</h5>
+            <ul class="body-list">
+              <li>Coordinated 60 students to progress their Award for the Duke of Edinburgh Program.</li>
+              <li>Trained students for their Qualifying Journey.</li>
+              <li>Facilitated 19 students in receiving their Bronze Award within 6 months, tripling the amount of awardees in school history.</li>
+            </ul>
+          </div>
+
+
+        <div class="experience-card">
+            <h3>Homework Club Tutor</h3>
+            <h5>2019, HAPANI BELFAST, UK</h5>
+            <ul class="body-list">
+              <li>Tutored underprivileged and marginalised children at Horn of Africa People's Aid Northern Ireland (HAPANI) organisation. Students come from a wide age range, from secondary students who are taking their IGCSEs to primary students.</li>
+            </ul>
+            <br>
+
+            <h3>LIYSF Delegate</h3>
+            <h5>2017, LONDON, UK</h5>
+            <ul class="body-list">
+              <li>Was a London International Youth Science Forum delegate, presenting a research on bioplastics production using keratin extracted from chicken feathers.</li>
+            </ul> 
+            <br>
+            
+            <h3>First Aid Volunteer</h3>
+            <h5>2017-2018, BINUS SERPONG, INDONESIA</h5>
+            <p>For the following events:</p>
+            <ul class="body-list">
+              <li>Binus Archery Competition, 2017</li>
+              <li>Binus Amazing Race, 2017</li>
+              <li>Bynamic Arts Festival, 2017</li>
+              <li>Beevolution Arts & Sports Festival 2017</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -184,7 +185,7 @@
   <section id="skills" class="section">
     <div class="container">
       <h2><i class="bi bi-gear"></i> Skills</h2>
-      <div class="skills-badges">
+      <div class="tabs-container">
       <span class="badge" >English</span>
       <span class="badge" >ISO 17025:2017</span>
       <span class="badge" >Python</span>
@@ -208,7 +209,6 @@
     </div>
   </section>
 
-  <!-- Education Section  -->
   <section id="education" class="section">
     <div class="container">
       <h2><i class="bi bi-building"></i> Education</h2>
@@ -225,7 +225,6 @@
     </div>
   </section>
 
-  <!-- Awards Section -->
   <section id="awards" class="section">
     <div class="container">
       <h2><i class="bi bi-trophy"></i> Awards</h2>
@@ -261,7 +260,6 @@
     </div>    
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section hero contact">
     <div class="container">
       <h2>Contact<br>
@@ -277,36 +275,55 @@
 
   <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".project-tab-badge");
-  const cards = document.querySelectorAll(".project-card");
+  // Projects tabs
+  const projectTabs = document.querySelectorAll(".project-tab-badge");
+  const projectCards = document.querySelectorAll(".project-card");
   
-  let currentIndex = 0;
+  let projectIndex = 0;
 
-  function updateTabs() {
-    // Hide all cards
-    cards.forEach(card => card.classList.remove('active'));
-    
-    // Show only the current card
-    if (cards[currentIndex]) {
-      cards[currentIndex].classList.add('active');
+  function updateProjectTabs() {
+    projectCards.forEach(card => card.classList.remove('active'));
+    if (projectCards[projectIndex]) {
+      projectCards[projectIndex].classList.add('active');
     }
-    
-    // Update active tab styling
-    tabs.forEach((tab, index) => {
-      tab.classList.toggle('active', index === currentIndex);
+    projectTabs.forEach((tab, index) => {
+      tab.classList.toggle('active', index === projectIndex);
     });
   }
 
-  // Tab click handlers
-  tabs.forEach((tab, index) => {
+  projectTabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
-      currentIndex = index;
-      updateTabs();
+      projectIndex = index;
+      updateProjectTabs();
+    });
+  });
+  
+  // Experience tabs
+  const experienceTabs = document.querySelectorAll(".experience-tab-badge");
+  const experienceCards = document.querySelectorAll(".experience-card");
+  
+  let experienceIndex = 0;
+
+  function updateExperienceTabs() {
+    experienceCards.forEach(card => card.classList.remove('active'));
+    if (experienceCards[experienceIndex]) {
+      experienceCards[experienceIndex].classList.add('active');
+    }
+    experienceTabs.forEach((tab, index) => {
+      tab.classList.toggle('active', index === experienceIndex);
+    });
+  }
+
+  experienceTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      experienceIndex = index;
+      updateExperienceTabs();
     });
   });
   
   // Initialize on load
-  updateTabs();
+  updateProjectTabs();
+  updateExperienceTabs();
 });
 
     // Dark mode toggle
@@ -316,12 +333,6 @@ document.addEventListener("DOMContentLoaded", () => {
       themeToggle.innerHTML = document.body.classList.contains('dark') ? '<i class="bi bi-sun-fill" style="color: white;"></i>' : '<i class="bi bi-moon-fill"style="color: black;"></i>';
     });
 
-    // Mobile nav toggle
-    // const navToggle = document.getElementById('navToggle');
-    // const navLinks = document.querySelector('.nav-links');
-    // navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-
-    // Smooth scroll
  document.querySelectorAll('nav a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
