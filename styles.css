@@ -35,8 +35,8 @@ h2 {
 }
 
 a {
-  color: #333333;
-  text-decoration: none;
+  color: #000000;
+  text-decoration: underline;
   transition: color 0.3s;
 }
 
@@ -306,8 +306,9 @@ body.dark .project-card {
   margin-left: 2rem;
 }
 
-body.dark .skills-container {
-  border-color: #666666;
+body.dark .content-container {
+  border-color: #777777;
+
 }
 
 
