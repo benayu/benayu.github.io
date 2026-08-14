@@ -1,10 +1,9 @@
 .container {
     width: 100%;
-    max-width: 75rem; /* maximum width for large screens */
-    margin: 0 auto;    /* center horizontally */
-    padding: 0 1rem;  /* small horizontal padding for small screens */
+    max-width: 75rem; 
+    margin: 0 auto;    
+    padding: 0 1rem;  
 }
-
 
 @media (min-width: 62.5rem) {
   .container {
@@ -21,22 +20,28 @@
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background: #fff;
-  color: #111;
+  background: #EEEEEE;
+  color: #333333;
   transition: background 1s, color 1s;
 }
 
 body.dark {
-  background: #111;
-  color: #eee;
+  background: #333333;
+  color: #EEEEEE;
 }
 
 h2 {
   margin-bottom: 1rem;
 }
 
-.body-list {
-  margin-left: 2rem;
+a {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+body.dark a{
+  color: #EEEEEE;
 }
 
 
@@ -45,12 +50,12 @@ h2 {
   height: auto;
   max-height: 10rem;
   object-fit: cover;
-  border: gray;
+  border: 1px solid #CCCCCC;
   border-radius: 5%;
 }
 
 .bi .bi-moon-fill {
-  color: black
+  color: #333333
 }
 
 /* Navbar */
@@ -58,31 +63,27 @@ h2 {
 
 /* Default navbar style */
 #navbar {
-  background-color: #ffffff; /* light mode background */
-  color: #000000; /* light mode text */
+  background-color: #EEEEEE; /* light mode background */
+  color: #333333; /* light mode text */
   transition: background-color 0.3s, color 0.3s;
   padding: 1rem;
 }
 
-/* Dark mode navbar style */
 body.dark #navbar {
-  background-color: #1a1a1a; /* dark mode background */
-  color: #f0f0f0; /* dark mode text */
+  background-color: #333333; /* dark mode background */
+  color: #EEEEEE; /* dark mode text */
 }
 
-/* Nav links dark mode */
 body.dark .nav-links a {
-  color: #f0f0f0;
+  color: #EEEEEE;
 }
 
-/* Nav links hover effect in dark mode */
 body.dark .nav-links a:hover {
   color: white;
 }
 
-/* Logo color in dark mode */
 body.dark .logo {
-  color: #f0f0f0;
+  color: #EEEEEE;
 }
 
 .nav-container {
@@ -131,33 +132,10 @@ body.dark .logo {
   border: none;
 }
 
-
-/* Mobile toggle hidden on desktop */
-/* .nav-toggle {
-  display: none;
-  font-size: 1.3rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-} */
-
-/* body.dark .nav-toggle {
-  background-color: inherit; 
-  color: #fff; 
-} */
-
-/* Sections */
 .section {
   padding: 3rem 1rem;
 }
 
-.bg-light {
-  background: #f7f7f7;
-}
-
-body.dark .bg-light {
-  background: #1c1c1c;
-}
 
 /* Contact */
 
@@ -170,23 +148,23 @@ body.dark .bg-light {
 }
 
 h2 a {
-  color: black;           /* Default link color */
+  color: #333333;           /* Default link color */
   text-decoration: none;  /* Remove underline */
   margin: 0 1rem;          /* Space between icons */
   transition: color 0.3s; /* Smooth color change */
 }
 
 h2 a:hover {
-  color: gray;
+  color: #666666;
 }
 
 body.dark h2 a {
-    color: white;
+    color: #EEEEEE;
   }
 
 
 body.dark h2 a:hover {
-    color: gray;
+    color: #CCCCCC;
   }
 
 
@@ -211,48 +189,94 @@ body.dark h2 a:hover {
   font-size: 1.2rem;
 }
 
-/* Projects Grid */
-/* Container holding the slideshow and the buttons absolute to it */
-.projects-slider-wrapper {
-  position: relative;
+
+.projects-tabs-container {
   display: flex;
-  align-items: center;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0 2rem 0;
 }
 
-/* Act as the 'window' that cuts off the other cards */
-.projects-slider-track {
-  width: 100%;
-  overflow: hidden; 
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 0.0625rem solid;
+  border-color: #CCCCCC;
+  color: #333333;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: transparent;
 }
 
-/* The long row holding all your cards side by side */
-.projects-grid {
-  display: flex;
-  transition: transform 0.4s ease-in-out; /* Smooth sliding effect */
-  width: 100%;
+body.dark .badge {
+  background-color: transparent;
+  color: #EEEEEE;
+  border-color: #777777;
 }
 
-/* ==========================================================================
-   MOBILE DEFAULT (Keeps 30px side margins)
-   ========================================================================== */
+.project-tab-badge {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project-tab-badge:hover {
+  border-color: #999999;
+  background-color: #CCCCCC;
+}
+
+.project-tab-badge.active {
+  background-color: #666666;
+  color: #EEEEEE;
+  border-color: #333333;
+}
+
+body.dark .project-tab-badge:hover {
+  background-color: #666666;
+  border-color: #999999;
+}
+
+body.dark .badge.active {
+  background-color: #CCCCCC;
+  color: #333333;
+  border-color: #999999;
+}
+
+body.dark .project-tab-badge:hover {
+  border-color: #999999;
+}
+
+body.dark .project-tab-badge.active {
+  background-color: #CCCCCC;
+  color: #333333;
+  border-color: #999999;
+}
+
 .project-card {
-  min-width: calc(100vw - 3.75rem);
-  max-width: calc(100vw - 3.75rem);
+  display: none;
   box-sizing: border-box;
-  margin: 0 1.875rem;
-  display: flex;
   flex-direction: column; 
-  background: #ffffff;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem solid #CCCCCC;
   overflow: hidden;
+}
+
+body.dark .project-card {
+  border: 0.0625rem solid #666666;
+}
+
+.project-card.active {
+  display: flex;
+  border: 1px solid #CCCCCC;
+  border-radius: 2rem;
 }
 
 
 
 .project-img {
   width: 100%;
-  height: 15.625rem;
+  height: 20rem;;
   object-fit: cover;
 }
 
@@ -264,100 +288,36 @@ body.dark h2 a:hover {
 }
 
 
-/* ==========================================================================
-   DESKTOP: Increased margins (Screens 768px and wider)
-   ========================================================================== */
-@media (min-width: 48rem) {
-  .project-card {
-    flex-direction: row;
-    align-items: stretch;
-    max-height: 28.125rem; 
-
-    min-width: calc(100vw - 12.5rem);
-    max-width: calc(100vw - 12.5rem);
-    margin: 0 6.25rem; 
-  }
-
-  .project-img {
-    width: 45%;
-    height: 100%;
-    min-height: 21.875rem;
-  }
-
-  .project-content {
-    width: 55%;
-    padding: 2.5rem;
-  }
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-/* Target the main section container to change the light background to dark */
-body.dark #projects.projects.section {
-  background-color: #121212 !important; /* Overrides the .bg-light bootstrap utility */
+.content-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 0.0625rem solid #CCCCCC;
 }
 
-/* Update section title color */
-body.dark #projects h2 {
-  color: #f8f9fa;
+.body-list {
+  margin-left: 2rem;
 }
 
-/* Style the cards for dark mode */
-body.dark .project-card {
-  background-color: #1e1e1e; /* Dark gray surface color for cards */
-  border: 1px solid #2d2d2d;  /* Soft border to give it dimension */
-  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.5); /* Deeper shadow for dark mode contrast */
+body.dark .skills-container {
+  border-color: #666666;
 }
-
-/* Adjust text inside the card for readability */
-body.dark .project-content h3 {
-  color: #ffffff;
-}
-
-body.dark .project-content p {
-  color: #b0b3b8; /* Muted light gray so it's easy on the eyes */
-}
-
-/* Style links/buttons for dark mode visibility */
-body.dark .project-content a {
-  color: #4da6ff; /* A slightly brighter blue for accessibility compliance */
-}
-
-/* Adjust the slider arrows so they stand out against the dark background */
-body.dark .slider-btn {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-}
-
-body.dark .slider-btn:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
-
 
 
 body.dark  p {
-  color: #b0b3b8; /* Muted light gray so it's easy on the eyes */
+  color: #CCCCCC; 
 }
 
 body.dark li {
-  color: #b0b3b8; /* Muted light gray so it's easy on the eyes */
+  color: #CCCCCC; 
 }
-
-
-/* Navigation Button Styling */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  padding: 0.625rem;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.btn-left { left: 0.625rem; }
-.btn-right { right: 0.625rem; }
 
 
 .nav-btn {
@@ -367,7 +327,7 @@ transform: translateY(-50%);
 border: none;
 cursor: pointer;
 z-index: 10;
-color: #000000;
+color: #333333;
 background-color: transparent;
 font-size: xx-large;
 }
@@ -402,7 +362,7 @@ right: 5rem;
 
 body.dark #scrollTopBtn {
   /* background-color: #555; */
-  color: #eee;
+  color: #EEEEEE;
   background-color: transparent;
 }
 
@@ -413,7 +373,7 @@ body.dark #scrollTopBtn {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: white; /* Match your site's background */
+  background-color: #EEEEEE; /* Match your site's background */
   box-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.1);
 }
 

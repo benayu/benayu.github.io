@@ -53,20 +53,19 @@
     </div>
   </section>
 
-  <!-- Projects Section  --><section id="projects" class="projects section bg-light">
+  <!-- Projects Section  --><section id="projects" class="projects section">
   <div class="container">
     <h2><i class="bi bi-box"></i> Projects</h2>
-  </div>
+    
+    <!-- Project Tabs -->
+    <div class="projects-tabs-container">
+      <button class="badge project-tab-badge active" data-tab="0">R: Stroke Prediction App</button>
+      <button class="badge project-tab-badge" data-tab="1">R: Gene Network Analysis</button>
+      <button class="badge project-tab-badge" data-tab="2">Ecosystem Card Game</button>
+      <button class="badge project-tab-badge" data-tab="3">Python: Organisation Tool</button>
+      <button class="badge project-tab-badge" data-tab="4">Duke of Edinburgh Award</button>
+    </div>
 
-  <div class="projects-slider-wrapper">
-    <!-- Left Navigation Button -->
-    <button class="slider-btn btn-left" id="slideLeft" aria-label="Slide left">
-      <i class="bi bi-chevron-left"></i>
-    </button>
-
-    <!-- The Window -->
-    <div class="projects-slider-track">
-      <!-- The Long Row of Cards -->
       <div class="projects-grid" id="projects-container">
         <div class="project-card">
           <img class="project-img" src="./images/stroke_prediction_app.jpg" alt="Stroke Prediction App">
@@ -117,13 +116,8 @@
           </div>
           </div>
       </div>
-    </div>
+      </div>  
 
-    <!-- Right Navigation Button -->
-    <button class="slider-btn btn-right" id="slideRight" aria-label="Slide right">
-      <i class="bi bi-chevron-right"></i>
-    </button>
-  </div>
 </section>
 
   <!-- Experience Section  -->
@@ -183,10 +177,20 @@
   </section>
 
   <!-- Skills Section  -->
-  <section id="skills" class="section bg-light">
+  <section id="skills" class="section">
     <div class="container">
       <h2><i class="bi bi-gear"></i> Skills</h2>
-      <ul class="body-list">
+      <div class="skills-badges">
+      <span class="badge" >English</span>
+      <span class="badge" >ISO 17025:2017</span>
+      <span class="badge" >Python</span>
+      <span class="badge" >R</span>
+      <span class="badge" >Lab Skills</span>
+      <span class="badge" >SPSS</span>
+      <span class="badge" >Child Safeguarding</span>
+      <span class="badge" >Critical Skills</span></div>
+      <div class="content-container">
+        <ul class="body-list">
         <li>English: TOEFL 107/120 (2025) <a href="files/TOEFL.pdf"><i class="bi bi-box-arrow-up-right"></i></a>, IELTS Band score 8.0 (2019) <a href="files/IELTS.pdf"><i class="bi bi-box-arrow-up-right"></i></a></li>
         <li>ISO 17025:2017 <a href="files\ISO170252017.pdf"><i class="bi bi-box-arrow-up-right"></i></a> Certification for laboratory management</li>
         <li>Python: Data analysis (Pandas, Matplotlib), Web development (Django, Flask, REST APIs)</li>
@@ -196,6 +200,7 @@
         <li>Child Safeguarding: DOE Award Training <a href="files/DukeofEdinburgh.pdf"><i class="bi bi-box-arrow-up-right"></i></a></li>
         <li>GRE test results: 318/340 (Q: 162, V: 156) <a href="files/GRE.pdf"><i class="bi bi-box-arrow-up-right"></i></a></li>
       </ul>
+      </div>
     </div>
   </section>
 
@@ -216,7 +221,7 @@
   </section>
 
   <!-- Awards Section -->
-  <section id="awards" class="section bg-light">
+  <section id="awards" class="section">
     <div class="container">
       <h2><i class="bi bi-trophy"></i> Awards</h2>
       <h3>MHLS GREAT Scholarship</h3>
@@ -261,44 +266,36 @@
 
   <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("projects-container");
-  const btnLeft = document.getElementById("slideLeft");
-  const btnRight = document.getElementById("slideRight");
+  const tabs = document.querySelectorAll(".project-tab-badge");
   const cards = document.querySelectorAll(".project-card");
   
   let currentIndex = 0;
 
- function updateSlider() {
-    // 1. Determine total side margins based on window width
-    // If window width is 768px or greater, total margin gap is 200px. Otherwise, it's 60px.
-    const totalMarginGap = window.innerWidth >= 768 ? 200 : 60;
+  function updateTabs() {
+    // Hide all cards
+    cards.forEach(card => card.classList.remove('active'));
     
-    // 2. Calculate the exact step distance (Card width + the total gap between items)
-    const cardWidth = cards[0].getBoundingClientRect().width + totalMarginGap;
+    // Show only the current card
+    if (cards[currentIndex]) {
+      cards[currentIndex].classList.add('active');
+    }
     
-    // 3. Shift the row smoothly
-    container.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+    // Update active tab styling
+    tabs.forEach((tab, index) => {
+      tab.classList.toggle('active', index === currentIndex);
+    });
   }
 
-  btnRight.addEventListener("click", () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    updateSlider();
+  // Tab click handlers
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      currentIndex = index;
+      updateTabs();
+    });
   });
-
-  btnLeft.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = cards.length - 1;
-    }
-    updateSlider();
-  });
-
-  window.addEventListener("resize", updateSlider);
+  
+  // Initialize on load
+  updateTabs();
 });
 
     // Dark mode toggle
