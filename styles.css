@@ -130,10 +130,10 @@ body.dark .logo {
 }
 
 h2 a {
-  color: #333333;           /* Default link color */
-  text-decoration: none;  /* Remove underline */
-  margin: 0 1rem;          /* Space between icons */
-  transition: color 0.3s; /* Smooth color change */
+  color: #333333;           
+  text-decoration: none;  
+  margin: 0 1rem; 
+  transition: color 0.3s; 
 }
 
 h2 a:hover {
@@ -167,7 +167,6 @@ body.dark h2 a:hover {
 .hero p {
   font-size: 1.2rem;
 }
-
 
 
 .badge {
