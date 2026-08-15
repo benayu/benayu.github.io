@@ -30,10 +30,6 @@ body.dark {
   color: #EEEEEE;
 }
 
-h2 {
-  margin-bottom: 1rem;
-}
-
 a {
   color: #000000;
   text-decoration: underline;
@@ -42,6 +38,11 @@ a {
 
 body.dark a{
   color: #EEEEEE;
+}
+
+small {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 
@@ -132,8 +133,8 @@ body.dark .logo {
 h2 a {
   color: #333333;           
   text-decoration: none;  
-  margin: 0 1rem; 
   transition: color 0.3s; 
+  margin: 1rem;
 }
 
 h2 a:hover {
@@ -148,6 +149,7 @@ body.dark h2 a {
 body.dark h2 a:hover {
     color: #CCCCCC;
   }
+
 
 /* Hero */
 .hero {
@@ -205,7 +207,8 @@ body.dark .badge {
 }
 
 .project-tab-badge:hover,
-.experience-tab-badge:hover {
+.experience-tab-badge:hover,
+.content-container.award-toggle:hover {
   border-color: #999999;
   background-color: #CCCCCC;
 }
@@ -218,7 +221,9 @@ body.dark .badge {
 }
 
 
-body.dark .project-tab-badge:hover {
+body.dark .project-tab-badge:hover,
+body.dark .experience-tab-badge:hover, 
+body.dark .content-container.award-toggle:hover {
   background-color: #666666;
   border-color: #999999;
 }
@@ -226,11 +231,6 @@ body.dark .project-tab-badge:hover {
 body.dark .badge.active {
   background-color: #CCCCCC;
   color: #333333;
-  border-color: #999999;
-}
-
-body.dark .project-tab-badge:hover,
-body.dark .experience-tab-badge:hover {
   border-color: #999999;
 }
 
@@ -294,6 +294,47 @@ body.dark .experience-card {
   padding: 1rem;
   border-radius: 20px;
   border: 0.0625rem solid #CCCCCC;
+}
+
+.award-toggle {
+  cursor: pointer;
+}
+
+.award-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.accordion-indicator {
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+
+.award-toggle.open .accordion-indicator {
+  transform: rotate(180deg);
+}
+
+.accordion-item {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 1rem;
+  border: 0.0625rem solid transparent;
+  border-radius: 20px;
+}
+
+.accordion-item.open {
+  max-height: 20rem;
+  opacity: 1;
+  padding: 1rem;
+  border-color: #CCCCCC;
+  margin-top: 1rem;
+}
+
+body.dark .accordion-item.open {
+  border-color: #777777;
 }
 
 .body-list {
