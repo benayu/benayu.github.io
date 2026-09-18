@@ -20,14 +20,14 @@
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background: #EEEEEE;
+  background: #FFFFFF;
   color: #333333;
   transition: background 1s, color 1s;
 }
 
 body.dark {
   background: #333333;
-  color: #EEEEEE;
+  color: #FFFFFF;
 }
 
 a {
@@ -37,7 +37,7 @@ a {
 }
 
 body.dark a{
-  color: #EEEEEE;
+  color: #FFFFFF;
 }
 
 small {
@@ -56,7 +56,7 @@ small {
 
 /* Default navbar style */
 #navbar {
-  background-color: #EEEEEE; /* light mode background */
+  background-color: #FFFFFF; /* light mode background */
   color: #333333; /* light mode text */
   transition: background-color 0.3s, color 0.3s;
   padding: 1rem;
@@ -64,11 +64,11 @@ small {
 
 body.dark #navbar {
   background-color: #333333; /* dark mode background */
-  color: #EEEEEE; /* dark mode text */
+  color: #FFFFFF; /* dark mode text */
 }
 
 body.dark .nav-links a {
-  color: #EEEEEE;
+  color: #FFFFFF;
 }
 
 body.dark .nav-links a:hover {
@@ -76,7 +76,7 @@ body.dark .nav-links a:hover {
 }
 
 body.dark .logo {
-  color: #EEEEEE;
+  color: #FFFFFF;
 }
 
 .nav-container {
@@ -142,7 +142,7 @@ h2 a:hover {
 }
 
 body.dark h2 a {
-    color: #EEEEEE;
+    color: #FFFFFF;
   }
 
 
@@ -187,7 +187,7 @@ body.dark h2 a:hover {
 
 body.dark .badge {
   background-color: transparent;
-  color: #EEEEEE;
+  color: #FFFFFF;
   border-color: #777777;
 }
 
@@ -216,7 +216,7 @@ body.dark .badge {
 .project-tab-badge.active,
 .experience-tab-badge.active {
   background-color: #666666;
-  color: #EEEEEE;
+  color: #FFFFFF;
   border-color: #333333;
 }
 
@@ -374,7 +374,7 @@ body.dark li {
 
 body.dark #scrollTopBtn {
   /* background-color: #555; */
-  color: #EEEEEE;
+  color: #FFFFFF;
   background-color: transparent;
 }
 
@@ -385,7 +385,7 @@ body.dark #scrollTopBtn {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #EEEEEE; /* Match your site's background */
+  background-color: #FFFFFF; /* Match your site's background */
   box-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.1);
 }
 
